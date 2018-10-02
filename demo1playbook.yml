@@ -1,0 +1,6 @@
+- name: Check Service is Running
+  hosts: localhost
+
+  tasks:
+    - name: Is docker running?
+      service: name=docker state=started
