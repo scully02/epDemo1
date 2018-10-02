@@ -1,6 +1,6 @@
-- name: Check Service is Running
+- name: Check for dummy Package
   hosts: localhost
 
   tasks:
-    - name: Is docker running?
-      service: name=docker state=started
+    - name: Check for dummy package?
+      yum: name=acme state=absent
